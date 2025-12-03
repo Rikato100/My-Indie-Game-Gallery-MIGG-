@@ -1,0 +1,559 @@
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#body {
+    height: 100%;
+    background: linear-gradient(#4361ee33, #16c79a33), url('Pics/wp.jpg');
+    background-repeat: no-repeat, repeat; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+&::-webkit-scrollbar {
+    display: none;
+}
+
+h1 {
+    margin-top: 1rem;
+    color: #4ecca3;
+    text-align: center  ;
+}   
+
+h2 {
+    margin-top: 1rem;
+    color: snow;
+    text-align-last: center;
+}
+
+.title {
+    margin-top: 1rem;
+    color: snow;
+    text-align: center;
+    font-size: 45px;
+    filter: drop-shadow(2px 2px #282828);
+}
+
+p {
+    color: snow;
+    margin: 1rem;
+    padding: 10px;
+    text-align: justify;
+    font-size: 24px;
+    outline-color: #333;
+}
+
+hr {
+    border: none;
+    border-radius: 100px;
+    height: 10px;
+    background: linear-gradient(135deg, #4361ee, #16c79a, #fd5e5e, snow, #1d6bc4);
+    background-size: 200% 500%;
+    animation: shimmer 3s infinite linear;
+}
+
+footer {
+    padding: 10px;  
+    background-color: #282828;
+    border-top: 5px solid #4ecca3;
+    flex: 1;
+}
+
+footer p {
+    text-align: center;
+    color: snow;
+    font-size: 16px;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* Animations */
+.splash {
+    position: fixed;
+    top: auto;
+    bottom: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fade 3s ease-in-out forwards;
+    z-index: 9999;
+}
+
+.splash-content {
+    text-align: center;
+    animation: scale 3s ease-in-out;
+    margin-bottom: 50px;
+}
+
+.intro {
+    width: 350px;
+    margin-bottom: -100px;
+    text-shadow: 2px 2px #282828;
+    filter:drop-shadow(2px 2px #282828)
+}
+
+.h11 {
+    margin-top: 1rem;
+    color: snow;
+    text-align: center;
+    margin-top: -10px;
+    filter:drop-shadow(2px 2px #282828)
+}
+
+@keyframes fade {
+    0% { opacity: 1; background: linear-gradient(#4361ee33, #16c79a33), url(Pics/wp.jpg); }
+    80% { opacity: 1; background: linear-gradient(#4361ee33, #16c79a33), url(Pics/wp.jpg); }
+    100% { opacity: 0; visibility: hidden; background: transparent; }
+}
+
+@keyframes scale {
+    0% { transform: scale(0.8); opacity: 0; }
+    10% { transform: scale(0.9); opacity: 0; }
+    30% { transform: scale(1.1); opacity: 1; }
+    50% { transform: scale(0.9); opacity: 0; }
+    70%  { transform: scale(1.2); opacity: 1 }
+    95%  { transform: scale(1.1); opacity: 1 }
+    100% { transform: scale(0.9); opacity: 0; }
+}
+
+@keyframes shimmer {
+    0% { background-position: -100% 0; }
+    100% { background-position: 100% 0; }
+}
+
+
+
+
+
+
+
+
+
+
+/* Navbar Codes */
+#box {
+    text-align: left;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+nav {
+    width: auto;
+    margin-top: 15px;
+    border-radius: 50px;
+    display: flex; 
+    align-items: center;
+    background: #282828;
+    justify-content: space-evenly;
+    border: 5px solid #05d9e9;
+    position: sticky;
+    top: 5px;
+    z-index: 100;
+}
+
+nav a {
+    font-weight: bold;
+    font-size: 1.5em;
+    display: block;
+    border-radius: 5px;
+    color: snow;
+    justify-content: inherit;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav ul {
+    list-style: none;
+    display: inherit;
+    justify-content: inherit;
+    margin-top: 1rem;
+}
+
+nav a:hover {
+    background-color: #34495e;
+    color:#4ecca3;
+    border-radius: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+/* For About Us / Contacts */
+.b-card {
+    width: 80%;
+    border-top: 10px solid #05d9e9;
+    border-right: 10px solid #05d9e9;
+    border-bottom: 10px solid #4ecca3;
+    border-left: 10px solid #4ecca3;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: rgba(0,0,0,0.2);
+    backdrop-filter: blur(5px);
+    border-style: groove;
+    outline-width: 6px;
+}
+
+.i-card {
+    background: rgba(30, 30, 30, 0.7);
+    border-radius: 15px;
+    padding: 1.5rem;
+    max-width: 50rem;
+    height: auto;
+    border: 2px solid #34495e;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    margin: auto;
+}
+
+input, textarea {
+    background-color: snow;
+    width: 70%;
+    margin: 1rem;
+    font-size: 20px;
+    padding: 1rem 1rem;
+    border-radius: 10px;
+    border-color: black;
+}
+
+input:focus-within, textarea:focus-within {
+    outline:none;
+    border-color:#05d9e9;
+    border-width: 3px;
+    outline-color: #05d9e9;
+    outline-style: double;
+    outline-width: 6px;
+}
+
+button {
+    background-color: #05d9e9;
+    border-radius: 10px;
+    font-family: 'Oswald';
+    font-size: 22px;
+    padding: 10px 18px ;
+    text-align: center;
+    display: flex;
+    margin: auto;
+    color: black;
+}
+
+button:hover {
+    opacity: 80%;
+    cursor: pointer;
+    background-color: rgba(40, 40, 40);
+    color: #05d9e9;
+}
+
+ul {
+    margin: 15px 0;
+    padding-left: 20px;
+    text-align: start;
+}
+
+ul li {
+    margin-bottom: 8px;
+    text-indent: 15%;
+    list-style: none;
+    color: snow;
+    font-size: 20px;
+}
+
+a {
+    color: #05d9e9;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: #4ecca3
+}
+
+
+
+
+
+
+
+
+
+
+/* For dropdown */
+.drop {
+    position: relative;
+    display: inline-block;
+}
+
+.drop-con {
+    display: none;
+    position: absolute;
+    background: rgba(60, 60, 60, 1);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    border: 2px solid #34495e;
+}
+
+.drop-con a {
+    color: snow;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 1.2em;
+    min-width: 250px;
+    border-bottom: 1px solid #34495e;
+}
+
+.drop-con a:hover {
+    background-color: #34495e;
+    border-radius: 100px;
+}
+
+.drop:hover .drop-con {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+/* Game Card */
+.games-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.game-card {
+    background: rgba(30, 30, 50, 0.7);
+    border-radius: 15px;
+    padding: 1rem;
+    width: 23%;
+    height: auto;
+    border: 2px solid #34495e;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.image-container {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.game-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.game-title {
+    color: #05d9e9;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.game-author {
+    color: #4ecca3;
+    font-size: 1.0rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.detail-item {
+    margin-bottom: 0.8rem;
+    color: snow;
+}
+
+.detail-label {
+    color: #4ecca3;
+    font-weight: bold;
+}
+
+.content-warning {
+    background-color: #d32f2f;
+    width: 100%;
+    border-top: 3px solid #b71c1c;
+    border-bottom: 3px solid #b71c1c;
+    padding: 1rem;
+    color: snow;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.content-warning-smol {
+    color: snow; 
+    font-size: 0.9em; 
+    text-align: center; 
+    background-color: #d32f2f; 
+    padding: 6px; 
+    border : 3px solid #b71c1c;
+    font-weight: bold;
+    border-radius: 12px;
+}
+
+
+
+
+
+
+
+
+
+/* For Game Buttons */
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.learn-more-btn, .trailer-btn {
+    flex: 1;
+    background: #4361ee;
+    color: snow;
+    padding: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.trailer-btn {
+    background: #e94560;
+}
+
+.learn-more-btn:hover {
+    background: #5a75f0;
+    transform: scale(1.10);
+}
+
+.trailer-btn:hover {
+    background: #f05a75;
+    transform: scale(1.10);
+}
+
+.details-toggle {
+    display: none;
+}
+
+.game-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    background: rgba(40, 40, 60, 0.8);
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.details-toggle:checked ~ .game-details {
+    max-height: 700px;
+    padding: 1rem;
+    opacity: 1;
+}
+
+.learn-more-btn::after {
+    content: "Learn More";
+}
+
+.details-toggle:checked ~ .button-group .learn-more-btn::after {
+    content: "Show Less";
+}
+
+.download-link {
+    display: inline-block;
+    background: #4ecca3;
+    color: black;
+    font-size: 1.1rem;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    transition: background 0.3s ease;
+}
+
+.download-link:hover {
+    background: #4ecca288;
+    color: snow;
+}
+
+
+
+
+
+
+
+
+
+
+/* For Logo */
+.Logo, .Logo2{
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    transition: transform 0.3s ease; /* For smooth transition */
+    display: flex;
+    align-items: center;
+}
+
+.Logo {
+    height: 400px;
+    margin-bottom: -150px;
+}
+
+.Logo2 {
+    margin-bottom: -110px;
+    height: 300px;
+}
+
+.Logo:hover {
+    transform: scale(1.05); /* When cursor hovers over logo, it will increase in size slightly */
+}
+
+.Logo2:hover {
+    transform: scale(1.05);
+}
+
+.smologo {
+    height: 80px;
+    transition: transform 0.3s ease;
+    display: flex;
+}
+
+.smologo:hover {
+    transform: scale(2.00);
+}
+
+#shadow {
+    filter:drop-shadow(2px 2px #282828)
+}
