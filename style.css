@@ -52,7 +52,7 @@ hr {
     border: none;
     border-radius: 100px;
     height: 10px;
-    background: linear-gradient(135deg, #4361ee, #16c79a, #fd5e5e, snow, #1d6bc4);
+    background: linear-gradient(135deg, #05d9e9, #4ecca3, #ffffff);
     background-size: 200% 500%;
     animation: shimmer 3s infinite linear;
 }
@@ -556,4 +556,5 @@ ul li a:hover {
 
 #shadow {
     filter:drop-shadow(2px 2px #282828)
+
 }
